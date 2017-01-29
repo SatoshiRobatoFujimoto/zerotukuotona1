@@ -58,6 +58,7 @@ if __name__ == "__main__":
     # 予測
     predictions = model.predict(list_of_4input)
     
+    print ('predictions')
     print predictions
 
     # 学習したネットワークの重みを保存
@@ -69,6 +70,7 @@ if __name__ == "__main__":
     W2 = np.array(weights2[0])
     b2 = np.array(weights2[1])
     
+    print ('W1,b1,W2,b2')
     print W1
     print b1
     print W2
