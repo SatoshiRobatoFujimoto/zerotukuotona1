@@ -26,3 +26,4 @@ if __name__ == '__main__':
     for x1, x2 in list_of_x1_x2:
         y = AND(x1, x2)
         print("%d %d | %d" % (x1, x2, y))
+
