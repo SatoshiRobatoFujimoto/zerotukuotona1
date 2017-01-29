@@ -11,6 +11,9 @@ dataset = np.loadtxt("pima-indians-diabetes.csv", delimiter=",")
 X = dataset[:,0:8]
 Y = dataset[:,8]
 
+# モデルを作成
+model = Sequential()
+
 # 係数の初期化
 W1 = np.random.rand(8, 12) * 0.1 - 0.05
 b1 = np.random.rand(12)    * 0.1 - 0.05
@@ -20,15 +23,10 @@ W3 = np.random.rand(8,1)   * 0.1 - 0.05
 b3 = np.random.rand(1)     * 0.1 - 0.05
 
 # モデルの各層を定義
-dense1 = Dense(12, weights=[W1, b1], activation='relu', input_dim=8)
-dense2 = Dense( 8, weights=[W2, b2], activation='relu')
-dense3 = Dense( 1, weights=[W3, b3], activation='sigmoid')
+
 
 # モデルの層を重ねる
-model = Sequential()
-model.add(dense1)
-model.add(dense2)
-model.add(dense3)
+
 
 # コンパイル
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
