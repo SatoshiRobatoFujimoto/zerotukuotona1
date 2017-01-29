@@ -6,7 +6,7 @@
 ```
 $ cd zerotukuotona1
 $ chmod +x install.sh
-$ install.sh
+$ ./install.sh
 ```
 
 ## ライブコーディング形式ですすめます
