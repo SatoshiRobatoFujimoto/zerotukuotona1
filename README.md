@@ -4,6 +4,7 @@
 ## まずは環境作成
 
 ```
+$ cd zerotukuotona1
 $ chmod +x install.sh
 $ install.sh
 ```
