@@ -34,12 +34,10 @@ model.add(dense3)
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # 学習
-model.fit(X, Y, nb_epoch=500, batch_size=10,  verbose=2)
+model.fit(X, Y, validation_split=0.2, nb_epoch=500, batch_size=10,  verbose=2)
 
 # 予測
 predictions = model.predict(X)
 
-print predictions
-
-
+#print predictions
 

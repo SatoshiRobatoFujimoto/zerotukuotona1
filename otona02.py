@@ -10,7 +10,7 @@ from keras.layers import Dense
 
 # 重みの設定
 
-# List -> numpyのarrayにする（ついでに１００倍にスケーリングする）
+# 重みを List -> numpyのarray にする（ついでに１００倍にスケーリングする）
 
 # モデルを作る
 

@@ -4,11 +4,13 @@ def Step(z):
     
     return 0
 
+
 def AND(x1, x2):
     
     y = 0
     
     return y
+
 
 # main関数
 if __name__ == '__main__':

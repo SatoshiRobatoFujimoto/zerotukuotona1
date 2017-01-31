@@ -16,14 +16,7 @@ if __name__ == "__main__":
         [1,1],
     ]
     
-    # output
-    list_of_1output = [
-        [0],
-        [1],
-        [1],
-        [0]
-    ]
-    
+    # 重みの設定
     W1 = [
         [-0.75, 1.5],
         [-0.75, 1.5],
@@ -32,14 +25,16 @@ if __name__ == "__main__":
     
     W2 = [[0.75], [0.75]]
     b2 = [-1]
-    
-    list_of_4input  = np.array(list_of_4input)
-    list_of_1output = np.array(list_of_1output)
+
+    # list_of_4input  = np.array(list_of_4input)
+    # list_of_1output = np.array(list_of_1output)
+
+    # 重みを List -> numpyのarray にする（ついでに１００倍にスケーリングする）
     W1 = np.array(W1) * 100
     b1 = np.array(b1) * 100
     W2 = np.array(W2) * 100
     b2 = np.array(b2) * 100
-    
+
     # ニューラルネットワークの各層を定義
     dense1 = Dense(2, weights=[W1, b1], activation='sigmoid', input_dim=2) #relu
     dense2 = Dense(1, weights=[W2, b2], activation='sigmoid')
@@ -53,7 +48,7 @@ if __name__ == "__main__":
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
     # 学習
-    # model.fit(list_of_4input, list_of_1output, nb_epoch=10, batch_size=10)
+    # model.fit(list_of_4input, list_of_1output, nb_epoch=10000, batch_size=10)
 
     # 評価
     # scores = model.evaluate(list_of_4input, list_of_1output, verbose=0)
